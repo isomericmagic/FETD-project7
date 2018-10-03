@@ -1,0 +1,387 @@
+/* ===================================== 
+   Page Styles
+======================================== */
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  border: 1px solid green;
+}
+
+#header-title {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.header-item {
+  height: 40px;
+  margin-top: 18px;
+}
+
+#bell {
+  border-right: 1px solid black;
+  margin-right: 15px;
+}
+
+#bell-pic {
+  height: 80%;
+  padding-top: 10px;
+  float: left;
+  color: green;
+  transition: height .5s;
+}
+
+#bell-pic:hover {
+  height: 90%;
+}
+
+#green-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: lightgreen;
+  margin-left: 17px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+#profile-avatar-pic {
+  height: 100%;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+#profile-name {
+  margin-top: 25px;
+  margin-right: 15px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.nav-item {
+  height: 60px;
+  width: 90px;
+  margin-top: 22px;
+}
+
+.nav-item-pic {
+  height: 60%;
+  display: block;
+  margin: auto;
+}
+
+#nav-item-1 {
+}
+
+main {
+  border: 1px solid blue;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#container-1 {
+  height: 500px;
+  border: 1px dotted black;
+}
+
+#dashboard-bar {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+}
+
+#dashboard-tab {
+  height: 60px;
+  margin-left: 15px;
+  border-right: 1px solid gray;
+}
+
+#search-container {
+  height: 60px;
+  border: 1px dotted black;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#search-field {
+  height: 75%;
+  width: 140px;
+  margin-right: 15px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.fa-search { 
+  position: absolute;
+  top: 97px;
+  left: 99%;
+}
+
+#line-chart-container {
+  height: 330px !important;
+  width: 96%;
+}
+
+#bar-chart-container {
+  height: 280px !important;
+  max-width: 96%;
+}
+
+#doughnut-chart-container {
+  height: 280px !important;
+  max-width: 96%;
+}
+
+.chart-title {
+  margin-left: 20px;
+}
+
+#container-2 {
+  min-height: 350px;
+  border: 1px dotted black;
+}
+
+#container-3 {
+  min-height: 230px;
+  border: 1px dotted black;
+}
+
+.social-icon-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #7b72b6;
+  margin-top: 14px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.social-box {
+  width: 250px;
+  height: 100px;
+  border: 1px solid lightgray;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.social-info {
+  display: inline;
+  float: right;
+  margin-right: 50px;
+}
+
+.social-count {
+  font-size: 36px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.social-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-block-start: 1em;
+  margin-block-end: 0em;
+}
+
+
+#container-4 {
+  min-height: 350px;
+  border: 1px dotted black;
+}
+
+#container-5 {
+  min-height: 355px;
+  border: 1px dotted black;
+}
+
+#recent-activity-title {
+  margin-left: 20px;
+}
+
+#recent-activity-container {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.member-pic {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.recent-activity-paragraph {
+  margin-block-start: 0em;
+  margin-block-end: 0em; 
+}
+
+.recent-activity-clicker {
+  margin-left: auto;
+  font-size: 32px;
+  font-weight: bold;
+  color: purple;
+}
+
+#recent-activity-text-container {
+  padding-bottom: 15px;
+}
+
+#container-6 {
+  min-height: 35px;
+  border: 1px dotted black;
+}
+
+.two-col-items {
+  flex-grow: 1;
+  height: 350px;
+  flex-basis: 300px;
+  border: 1px solid red;
+}
+
+#container-3-title {
+  height: 60px;
+  border: 2px solid blue;
+}
+
+.three-col-items {
+  flex-grow: 1;
+  height: 170px;
+  flex-basis: 170px;
+  border: 1px solid orange;
+}
+
+
+/* ===================================== 
+   Grid Layout
+======================================== */
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: 75px 1fr; 
+  grid-template-areas: 
+  "header header"
+  "nav main";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+nav {
+  grid-area: nav;
+}
+
+/* ===================================== 
+   Alert CSS
+======================================== */
+#alert {
+    padding: 10px 10px 10px 10px;
+    background-color: purple;
+    color: white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+#closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#closebtn:hover {
+    color: black;
+}
+
+
+/* ===================================== 
+   Media Queries
+======================================== */
+@media (min-width: 360px) {
+  .fa-search { 
+    left: 93%;
+  }
+}
+
+@media (min-width: 400px) {
+  .fa-search { 
+    left: 91%;
+  }
+}
+
+@media (min-width: 500px) {
+  #search-field {
+    width: 250px;
+  }
+  .fa-search { 
+    left: 90%;
+  }
+}
+
+@media (min-width: 600px) {
+  .fa-search { 
+    left: 93.5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .fa-search { 
+    left: 95%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #search-field {
+    width: 300px;
+  }
+
+  .fa-search { 
+    left: 95%;
+  }
+}
+
+@media (min-width: 1300px) {
+  #search-field {
+    width: 380px;
+  }
+
+  .fa-search { 
+    left: 96%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .fa-search { 
+    left: 97.5%;
+  }
+}
