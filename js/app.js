@@ -10,11 +10,15 @@ var ctx = document.getElementById('line-chart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["16-22","23-29","30-5","6-12","13-19","20-26","27-3","4-10","11-17","18-24","25-3"],
+    labels: ["16-22","23-29","30-5","6-12","13-19","20-26","27-3","4-10","11-17","18-24","25-31"],
     datasets: [{
-      label: 'apples',
+      label: '',
       data: [0,750,1250,1000,1500,2000,1500,1750,1250,1750,2250,1750,2250],
-      backgroundColor: "rgba(182, 149, 192, .5)"
+      backgroundColor: "rgba(182, 149, 192, .5)",
+      pointRadius: 7,
+      pointBackgroundColor: "white",
+      pointBorderColor: "#7F7FBB",
+      pointBorderWidth: 2
     }]
   },
   options: {
@@ -75,5 +79,19 @@ new Chart(document.getElementById("doughnut-chart"), {
     	responsive: true,
       maintainAspectRatio: false
     }
+});
+
+//setup submit click / prevent default / add messaging
+document.getElementById('send-button').addEventListener("click", function(event){
+    event.preventDefault()
+    let userField = document.getElementById('search-user-field');
+    let messageField = document.getElementById('message-user-field');
+    if (userField.value === '' || messageField.value === '') {
+      alert("ERROR: User and Message Field Can't Be Empty!");
+    } else {
+      alert('Message Sent!');
+    }
+  userField.value = ''
+  messageField.value = ''
 });
 

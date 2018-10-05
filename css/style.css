@@ -11,12 +11,18 @@ body {
 
 header {
   display: flex;
-  border: 1px solid green;
+  background-color: #7F7FBB;
 }
 
 #header-title {
   margin-right: auto;
   margin-left: 20px;
+  color: white;
+  font-weight: 100;
+}
+
+#dash {
+  font-weight: bold;
 }
 
 .header-item {
@@ -25,7 +31,7 @@ header {
 }
 
 #bell {
-  border-right: 1px solid black;
+  border-right: 1px solid #5b2296;
   margin-right: 15px;
 }
 
@@ -61,12 +67,13 @@ header {
 #profile-name {
   margin-top: 25px;
   margin-right: 15px;
+  color: white;
+  font-weight: 100;
 }
 
 nav {
   display: flex;
-  flex-direction: column;
-  border: 1px solid red;
+  background-color: #4C4C70;
 }
 
 .nav-item {
@@ -81,11 +88,8 @@ nav {
   margin: auto;
 }
 
-#nav-item-1 {
-}
-
-main {
-  border: 1px solid blue;
+#dashboard-text {
+  color: #5F5F62;
 }
 
 .main-container {
@@ -95,7 +99,7 @@ main {
 
 #container-1 {
   height: 500px;
-  border: 1px dotted black;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 #dashboard-bar {
@@ -107,20 +111,21 @@ main {
 #dashboard-tab {
   height: 60px;
   margin-left: 15px;
-  border-right: 1px solid gray;
+  border-right: 1px solid #bfbfbf;
 }
 
 #search-container {
   height: 60px;
-  border: 1px dotted black;
   display: flex;
   flex-direction: row-reverse;
+  border-bottom: 1px solid #bfbfbf;
+  background-color: #efefef;
 }
 
 #search-field {
   height: 75%;
-  width: 140px;
-  margin-right: 15px;
+  width: 180px;
+  margin-right: 50px;
   margin-top: 5px;
   border-radius: 5px;
 }
@@ -128,7 +133,8 @@ main {
 .fa-search { 
   position: absolute;
   top: 97px;
-  left: 99%;
+  visibility: hidden;
+  color: #7F7FBB;
 }
 
 #line-chart-container {
@@ -148,16 +154,17 @@ main {
 
 .chart-title {
   margin-left: 20px;
+  font-weight: 100;
 }
 
 #container-2 {
   min-height: 350px;
-  border: 1px dotted black;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 #container-3 {
   min-height: 230px;
-  border: 1px dotted black;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 .social-icon-container {
@@ -202,23 +209,139 @@ main {
 
 #container-4 {
   min-height: 350px;
-  border: 1px dotted black;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+#search-user-field {
+  display: block;
+  margin-left: 20px;
+  height: 40px;
+  width: 90%; 
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#message-user-field {
+  display: block;
+  margin-left: 20px;
+  height: 125px;
+  width: 90%; 
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#send-button {
+  display: block;
+  margin-left: 20px;
+  height: 50px;
+  width: 90%; 
+  border-radius: 5px;
+  background-color: #7F7FBB;
+  color: white;
 }
 
 #container-5 {
   min-height: 355px;
-  border: 1px dotted black;
 }
 
-#recent-activity-title {
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #7F7FBB;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(56px);
+  -ms-transform: translateX(56px);
+  transform: translateX(56px);
+}
+
+#timezone-list {
+  width: 90%;
+  height: 40px;
   margin-left: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-#recent-activity-container {
+.settings-container {
   display: flex;
+  margin-bottom: 20px;
+}
+
+.slider-label {
+  margin-block-start: .5em;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+#email-notifications-text {
+  margin-right: 64px;
+}
+
+
+#recent-activity-title,
+#new-members-title,
+#message-user-title,
+#settings-title {
+  margin-left: 20px;
+  font-weight: 100;
+}
+
+.recent-activity-container,
+.new-members-container {
+  display: flex;
+  margin-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.recent-activity-container:nth-child(5) {
+  border-bottom: none;
+}
+
+.new-members-container:nth-child(5) {
+  border-bottom: none;
 }
 
 .member-pic {
@@ -228,7 +351,8 @@ main {
   border-radius: 20px;
 }
 
-.recent-activity-paragraph {
+.recent-activity-paragraph,
+.new-members-paragraph {
   margin-block-start: 0em;
   margin-block-end: 0em; 
 }
@@ -240,33 +364,55 @@ main {
   color: purple;
 }
 
-#recent-activity-text-container {
+.new-members-date {
+  margin-left: auto;
+}
+
+.recent-activity-text-container,
+.new-members-text-container {
   padding-bottom: 15px;
+}
+
+#save-button,
+#cancel-button {
+  display: inline-block;
+  margin-left: 20px;
+  height: 50px;
+  width: 42%; 
+  border-radius: 5px;
+  color: white;
+}
+
+#save-button {
+  background-color: #7F7FBB;
 }
 
 #container-6 {
   min-height: 35px;
-  border: 1px dotted black;
 }
 
 .two-col-items {
   flex-grow: 1;
-  height: 350px;
+  min-height: 350px;
   flex-basis: 300px;
-  border: 1px solid red;
 }
 
 #container-3-title {
   height: 60px;
-  border: 2px solid blue;
 }
 
 .three-col-items {
   flex-grow: 1;
   height: 170px;
   flex-basis: 170px;
-  border: 1px solid orange;
 }
+
+  #daily-traffic, 
+  #message-user, 
+  #new-members {
+  border-bottom: 1px solid #bfbfbf;
+  }
+
 
 
 /* ===================================== 
@@ -276,11 +422,12 @@ main {
 body {
   height: 100vh;
   display: grid;
-  grid-template-columns: 90px 1fr;
-  grid-template-rows: 75px 1fr; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px 75px 1fr; 
   grid-template-areas: 
-  "header header"
-  "nav main";
+  "header"
+  "nav"
+  "main";
 }
 
 header {
@@ -327,61 +474,66 @@ nav {
 /* ===================================== 
    Media Queries
 ======================================== */
-@media (min-width: 360px) {
-  .fa-search { 
-    left: 93%;
+
+@media (min-width: 425px) {
+  body {
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 75px 1fr; 
+    grid-template-areas: 
+    "header header"
+    "nav main";
+  }
+
+  nav {
+    flex-direction: column;
   }
 }
 
-@media (min-width: 400px) {
-  .fa-search { 
-    left: 91%;
+@media (min-width: 617px) {
+  #daily-traffic,
+  #message-user {
+  border-right: 1px solid #bfbfbf;
+  border-bottom: none;
   }
 }
 
-@media (min-width: 500px) {
-  #search-field {
-    width: 250px;
-  }
-  .fa-search { 
-    left: 90%;
+@media (min-width: 617px) {
+  #daily-traffic,
+  #message-user {
+  border-right: 1px solid #bfbfbf;
+  border-bottom: none;
   }
 }
 
-@media (min-width: 600px) {
-  .fa-search { 
-    left: 93.5%;
+@media (min-width: 696px) {
+  #new-members {
+  border-right: 1px solid #bfbfbf;
+  border-bottom: none;
   }
 }
 
 @media (min-width: 768px) {
   .fa-search { 
-    left: 95%;
+    left: 90.5%;
+    visibility: visible;
+  }
+  #search-field {
+    width: 300px;
   }
 }
 
 @media (min-width: 1024px) {
+    .fa-search { 
+    left: 92.5%;
+  }
   #search-field {
-    width: 300px;
-  }
-
-  .fa-search { 
-    left: 95%;
+    width: 400px;
   }
 }
 
-@media (min-width: 1300px) {
-  #search-field {
-    width: 380px;
-  }
-
-  .fa-search { 
-    left: 96%;
+@media (min-width: 1400px) {
+    .fa-search { 
+    left: 94.5%;
   }
 }
 
-@media (min-width: 1500px) {
-  .fa-search { 
-    left: 97.5%;
-  }
-}
